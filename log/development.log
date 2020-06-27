@@ -576,3 +576,68 @@ Processing by NoticesController#create as HTML
 Completed 201 Created in 40ms (Views: 1.4ms | ActiveRecord: 25.1ms | Allocations: 2843)
 
 
+Started GET "/notices" for ::1 at 2020-06-27 16:48:42 -0400
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by NoticesController#index as */*
+  [1m[36mNotice Load (10.5ms)[0m  [1m[34mSELECT "notices".* FROM "notices"[0m
+  ↳ app/controllers/notices_controller.rb:8:in `index'
+Completed 200 OK in 64ms (Views: 40.1ms | ActiveRecord: 18.6ms | Allocations: 19428)
+
+
+Started GET "/" for ::1 at 2020-06-27 16:49:38 -0400
+  
+SyntaxError (/Users/jamesmartinez/Desktop/Noticeboard/noticeboard_app/noticeboard_app_api/app/controllers/welcome_controller.rb:3: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+...nder json:{status:200, message"Noticeboard API"}
+...                              ^
+/Users/jamesmartinez/Desktop/Noticeboard/noticeboard_app/noticeboard_app_api/app/controllers/welcome_controller.rb:3: syntax error, unexpected '}', expecting end
+...:200, message"Noticeboard API"}
+...                              ^):
+  
+app/controllers/welcome_controller.rb:3: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/controllers/welcome_controller.rb:3: syntax error, unexpected '}', expecting end
+app/controllers/welcome_controller.rb:3: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+app/controllers/welcome_controller.rb:3: syntax error, unexpected '}', expecting end
+Started GET "/favicon.ico" for ::1 at 2020-06-27 16:49:39 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-06-27 16:49:57 -0400
+Processing by WelcomeController#index as HTML
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 130)
+
+
+Started GET "/notices" for ::1 at 2020-06-27 16:50:02 -0400
+Processing by NoticesController#index as */*
+  [1m[36mNotice Load (127.4ms)[0m  [1m[34mSELECT "notices".* FROM "notices"[0m
+  ↳ app/controllers/notices_controller.rb:8:in `index'
+Completed 200 OK in 348ms (Views: 103.1ms | ActiveRecord: 242.3ms | Allocations: 18999)
+
+
+Started GET "/" for ::1 at 2020-06-27 16:50:04 -0400
+Processing by WelcomeController#index as HTML
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 98)
+
+
