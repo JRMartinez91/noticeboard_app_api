@@ -1,0 +1,578 @@
+  [1m[35m (836.6ms)[0m  [1m[35mCREATE DATABASE "noticeboard_app_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (309.6ms)[0m  [1m[35mCREATE DATABASE "noticeboard_app_api_test" ENCODING = 'unicode'[0m
+  [1m[35m (67.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2294373376959684510)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2294373376959684510)[0m
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2294373376959684510)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2294373376959684510)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (27.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (134.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "noticeboard_app_api_development"[0m
+  [1m[35m (104.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "noticeboard_app_api_test"[0m
+  [1m[35m (650.6ms)[0m  [1m[35mCREATE DATABASE "noticeboard_app_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (298.2ms)[0m  [1m[35mCREATE DATABASE "noticeboard_app_api_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (2.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (10.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (5.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (0)[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (21.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-06-27 15:56:20.399503"], ["updated_at", "2020-06-27 15:56:20.399503"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "83e6e9510955ef04f606b0339b1f0d53760104f9"], ["created_at", "2020-06-27 15:56:20.433324"], ["updated_at", "2020-06-27 15:56:20.433324"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (9.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (0)[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-06-27 15:56:20.624422"], ["updated_at", "2020-06-27 15:56:20.624422"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (2.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-06-27 15:56:20.633127"], ["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (25.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "83e6e9510955ef04f606b0339b1f0d53760104f9"], ["created_at", "2020-06-27 15:56:20.673804"], ["updated_at", "2020-06-27 15:56:20.673804"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (29.4ms)[0m  [1m[35mCREATE DATABASE "noticeboard_app_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (27.9ms)[0m  [1m[35mCREATE DATABASE "noticeboard_app_api_test" ENCODING = 'unicode'[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2294373376959684510)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateNotices (20200627160012)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (43.4ms)[0m  [1m[35mCREATE TABLE "notices" ("id" bigserial primary key, "title" character varying, "author" character varying, "content" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (3.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200627160012"]]
+  [1m[35m (21.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(2294373376959684510)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (21.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (2.0ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Pbr&b you probably haven't heard of them everyday selfies disrupt semiotics."], ["author", "Massachusetts druids"], ["content", "Et beatae maxime. Ex in ea. Omnis itaque quod."], ["created_at", "2020-06-27 16:15:12.731926"], ["updated_at", "2020-06-27 16:15:12.731926"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (27.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (1.5ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Lumbersexual tofu pork belly salvia everyday."], ["author", "New Jersey werewolves"], ["content", "Voluptas dolorum possimus. Sed nihil aliquid. Soluta consequatur aut."], ["created_at", "2020-06-27 16:15:12.782040"], ["updated_at", "2020-06-27 16:15:12.782040"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (18.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (6.1ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Iphone echo trust fund marfa carry put a bird on it raw denim."], ["author", "Wyoming penguins"], ["content", "Libero sit ullam. Recusandae inventore et. Ipsa velit est."], ["created_at", "2020-06-27 16:15:12.834229"], ["updated_at", "2020-06-27 16:15:12.834229"]]
+  [1m[35m (25.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (2.4ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Cred lumbersexual kitsch pop-up shabby chic occupy cornhole banh mi."], ["author", "Texas elephants"], ["content", "Autem eos aperiam. Modi distinctio laboriosam. Dolorum ut hic."], ["created_at", "2020-06-27 16:15:12.911476"], ["updated_at", "2020-06-27 16:15:12.911476"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (2.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.5ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Pabst tattooed typewriter chartreuse sriracha church-key."], ["author", "Idaho chimeras"], ["content", "Id cupiditate commodi. Quisquam fugit laborum. Adipisci neque quia."], ["created_at", "2020-06-27 16:15:12.950440"], ["updated_at", "2020-06-27 16:15:12.950440"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (25.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.8ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Intelligentsia cliche vhs fingerstache tote bag banh mi."], ["author", "Illinois lycanthropes"], ["content", "Assumenda consequatur libero. Sint nihil voluptatem. Tenetur doloribus modi."], ["created_at", "2020-06-27 16:15:12.981871"], ["updated_at", "2020-06-27 16:15:12.981871"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (32.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (25.9ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Squid trust fund pbr&b butcher mustache everyday chartreuse."], ["author", "California witches"], ["content", "Ab porro cumque. Debitis doloremque eum. Porro omnis veniam."], ["created_at", "2020-06-27 16:15:13.040512"], ["updated_at", "2020-06-27 16:15:13.040512"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (1.0ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Ennui goth gluten-free slow-carb poutine echo."], ["author", "South Carolina oxen"], ["content", "Ullam qui placeat. Voluptatibus optio eos. Facere sequi dignissimos."], ["created_at", "2020-06-27 16:15:13.109522"], ["updated_at", "2020-06-27 16:15:13.109522"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.7ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Flexitarian pitchfork umami typewriter godard hammock distillery phlogiston selvage."], ["author", "Florida buffalo"], ["content", "Culpa qui perferendis. Ullam alias ratione. Praesentium ad totam."], ["created_at", "2020-06-27 16:15:13.119920"], ["updated_at", "2020-06-27 16:15:13.119920"]]
+  [1m[35m (26.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (1.4ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Kale chips knausgaard bicycle rights messenger bag blue bottle shoreditch."], ["author", "Iowa witches"], ["content", "Molestiae sit nisi. Commodi rerum sed. Qui explicabo corporis."], ["created_at", "2020-06-27 16:15:13.157148"], ["updated_at", "2020-06-27 16:15:13.157148"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (5.4ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Distillery street bushwick fanny pack tofu kinfolk 90's."], ["author", "South Dakota chimeras"], ["content", "Quod odit expedita. Pariatur magnam quia. Similique eligendi consequuntur."], ["created_at", "2020-06-27 16:15:13.168101"], ["updated_at", "2020-06-27 16:15:13.168101"]]
+  [1m[35m (29.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (1.5ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Artisan hella kitsch scenester jean shorts tumblr brooklyn."], ["author", "Oregon gnomes"], ["content", "Exercitationem iure omnis. Quo enim deserunt. Iusto ullam quidem."], ["created_at", "2020-06-27 16:15:13.213745"], ["updated_at", "2020-06-27 16:15:13.213745"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (20.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (14.3ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Tattooed locavore five dollar toast lo-fi pabst intelligentsia meggings."], ["author", "Wyoming buffalo"], ["content", "Tempore ipsam possimus. Voluptatem dignissimos minima. Reprehenderit voluptatem dicta."], ["created_at", "2020-06-27 16:15:13.232015"], ["updated_at", "2020-06-27 16:15:13.232015"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (29.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.5ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Artisan art party aesthetic scenester swag readymade."], ["author", "Utah spirits"], ["content", "Enim qui suscipit. Aut alias numquam. Eum est saepe."], ["created_at", "2020-06-27 16:15:13.278048"], ["updated_at", "2020-06-27 16:15:13.278048"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.5ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Before they sold out sartorial leggings messenger bag iphone tote bag vhs vice."], ["author", "New York black cats"], ["content", "Unde quis voluptas. Aperiam nihil amet. Quas eos quae."], ["created_at", "2020-06-27 16:15:13.319566"], ["updated_at", "2020-06-27 16:15:13.319566"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (21.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.8ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Crucifix cardigan vegan brooklyn you probably haven't heard of them 3 wolf moon ethical."], ["author", "Illinois fishes"], ["content", "Ut debitis quisquam. Dolor error quia. Quia veniam quia."], ["created_at", "2020-06-27 16:15:13.331026"], ["updated_at", "2020-06-27 16:15:13.331026"]]
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (26.0ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Next level retro raw denim marfa bushwick forage yuccie."], ["author", "Oregon elves"], ["content", "Quas exercitationem et. Harum dolores et. Odio impedit dicta."], ["created_at", "2020-06-27 16:15:13.374861"], ["updated_at", "2020-06-27 16:15:13.374861"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (9.7ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Gluten-free put a bird on it waistcoat humblebrag."], ["author", "West Virginia lycanthropes"], ["content", "Veniam odio quibusdam. Id ab ratione. Qui sed similique."], ["created_at", "2020-06-27 16:15:13.411755"], ["updated_at", "2020-06-27 16:15:13.411755"]]
+  [1m[35m (22.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.6ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Whatever try-hard banh mi roof blue bottle."], ["author", "Virginia frogs"], ["content", "Omnis impedit repellat. Ullam sequi autem. Qui dolores quasi."], ["created_at", "2020-06-27 16:15:13.456765"], ["updated_at", "2020-06-27 16:15:13.456765"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (2.5ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Crucifix pickled phlogiston goth artisan cronut."], ["author", "Indiana zebras"], ["content", "Dolores reiciendis deleniti. Provident aut eos. Quasi est illum."], ["created_at", "2020-06-27 16:15:13.468405"], ["updated_at", "2020-06-27 16:15:13.468405"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (2.0ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Fixie helvetica schlitz cornhole."], ["author", "Maryland conspirators"], ["content", "Dolor sunt rem. Accusantium facilis itaque. Eveniet distinctio iure."], ["created_at", "2020-06-27 16:15:13.521473"], ["updated_at", "2020-06-27 16:15:13.521473"]]
+  [1m[35m (26.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (1.8ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Marfa +1 readymade cardigan banjo waistcoat selvage."], ["author", "Alaska griffins"], ["content", "Et voluptas nobis. Aut sit perspiciatis. Nam iure rerum."], ["created_at", "2020-06-27 16:15:13.558998"], ["updated_at", "2020-06-27 16:15:13.558998"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.6ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Flexitarian plaid viral godard diy fashion axe actually butcher."], ["author", "Michigan ants"], ["content", "Et est exercitationem. Ut eum sapiente. Laborum et nemo."], ["created_at", "2020-06-27 16:15:13.572657"], ["updated_at", "2020-06-27 16:15:13.572657"]]
+  [1m[35m (26.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.6ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Bushwick pickled diy fingerstache slow-carb everyday kale chips migas stumptown."], ["author", "North Carolina spirits"], ["content", "Ea alias voluptatibus. Molestiae ea quos. Error facilis commodi."], ["created_at", "2020-06-27 16:15:13.610220"], ["updated_at", "2020-06-27 16:15:13.610220"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (27.0ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Humblebrag chicharrones tattooed plaid typewriter banjo vice next level kombucha."], ["author", "Illinois gooses"], ["content", "Aut voluptas commodi. Qui aut et. Sed aliquam neque."], ["created_at", "2020-06-27 16:15:13.623644"], ["updated_at", "2020-06-27 16:15:13.623644"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.9ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Crucifix mumblecore narwhal locavore beard flexitarian."], ["author", "Connecticut foxes"], ["content", "Qui dolor cumque. Ea quia quod. Officiis sunt aut."], ["created_at", "2020-06-27 16:15:13.667937"], ["updated_at", "2020-06-27 16:15:13.667937"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (22.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.6ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Swag 8-bit art party fingerstache neutra vhs artisan put a bird on it bitters."], ["author", "New Hampshire wolves"], ["content", "Ab qui quaerat. Eaque amet placeat. Inventore aspernatur recusandae."], ["created_at", "2020-06-27 16:15:13.681265"], ["updated_at", "2020-06-27 16:15:13.681265"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.6ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Vice pabst xoxo hammock bushwick viral paleo ugh franzen."], ["author", "New Mexico whales"], ["content", "Et aut et. Aut est dolorem. Ipsum vel eligendi."], ["created_at", "2020-06-27 16:15:13.715891"], ["updated_at", "2020-06-27 16:15:13.715891"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (24.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (3.9ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Cliche try-hard trust fund skateboard flannel."], ["author", "Wisconsin spirits"], ["content", "Pariatur explicabo quo. Molestiae nihil et. Nam minus tempore."], ["created_at", "2020-06-27 16:15:13.729729"], ["updated_at", "2020-06-27 16:15:13.729729"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (2.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (1.2ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Helvetica thundercats blog flexitarian artisan cred selvage."], ["author", "Rhode Island zombies"], ["content", "Ab facere quaerat. Aliquam eius modi. Nobis voluptas et."], ["created_at", "2020-06-27 16:15:13.765341"], ["updated_at", "2020-06-27 16:15:13.765341"]]
+  [1m[35m (26.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (3.3ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Street squid narwhal bushwick forage."], ["author", "Louisiana ghosts"], ["content", "Voluptas eum nihil. Mollitia repellendus et. Nam est atque."], ["created_at", "2020-06-27 16:15:13.811029"], ["updated_at", "2020-06-27 16:15:13.811029"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (27.7ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Art party actually pinterest you probably haven't heard of them tote bag mixtape phlogiston umami."], ["author", "Arizona ducks"], ["content", "Est et dolore. Iusto nihil nobis. Cum odio asperiores."], ["created_at", "2020-06-27 16:15:13.824383"], ["updated_at", "2020-06-27 16:15:13.824383"]]
+  [1m[35m (42.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (2.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (1.5ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Shabby chic microdosing franzen art party scenester put a bird on it cornhole."], ["author", "Oklahoma dwarves"], ["content", "Sed rerum tenetur. Quia explicabo hic. Minus fugit aperiam."], ["created_at", "2020-06-27 16:15:13.913359"], ["updated_at", "2020-06-27 16:15:13.913359"]]
+  [1m[35m (44.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (5.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (25.9ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Paleo franzen cronut locavore chillwave heirloom ugh cardigan bespoke."], ["author", "Montana geese"], ["content", "Tempora at alias. Veritatis pariatur in. Voluptatum autem sint."], ["created_at", "2020-06-27 16:15:13.969641"], ["updated_at", "2020-06-27 16:15:13.969641"]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (2.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (33.9ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Shoreditch lumbersexual sustainable you probably haven't heard of them xoxo hashtag artisan."], ["author", "New York goblins"], ["content", "Ut sit facere. Enim voluptatibus ullam. Nemo sint repellendus."], ["created_at", "2020-06-27 16:15:14.011940"], ["updated_at", "2020-06-27 16:15:14.011940"]]
+  [1m[35m (14.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (42.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.5ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Chambray migas banjo narwhal small batch."], ["author", "Minnesota people"], ["content", "Doloribus tempora facilis. Quos et ducimus. Eius tempore voluptas."], ["created_at", "2020-06-27 16:15:14.074036"], ["updated_at", "2020-06-27 16:15:14.074036"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (24.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.5ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Asymmetrical pinterest kitsch meh literally try-hard loko fixie."], ["author", "North Dakota foxes"], ["content", "Eveniet dolor deleniti. Optio accusamus vitae. Aut hic explicabo."], ["created_at", "2020-06-27 16:15:14.128673"], ["updated_at", "2020-06-27 16:15:14.128673"]]
+  [1m[35m (8.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (6.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (29.2ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Next level waistcoat tumblr umami pbr&b kickstarter."], ["author", "Oklahoma lions"], ["content", "Repellat magnam eum. Quo minima et. Neque perferendis qui."], ["created_at", "2020-06-27 16:15:14.169999"], ["updated_at", "2020-06-27 16:15:14.169999"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (35.1ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Locavore seitan retro post-ironic bushwick 3 wolf moon williamsburg health diy."], ["author", "Colorado lycanthropes"], ["content", "Eum totam sit. Cupiditate voluptatem ut. Eos perspiciatis ut."], ["created_at", "2020-06-27 16:15:14.214756"], ["updated_at", "2020-06-27 16:15:14.214756"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (4.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.9ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Yolo mlkshk beard ennui viral authentic."], ["author", "Nevada elves"], ["content", "Quas non eius. Et et aliquam. Asperiores rerum distinctio."], ["created_at", "2020-06-27 16:15:14.257568"], ["updated_at", "2020-06-27 16:15:14.257568"]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (28.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.6ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Roof forage cray humblebrag literally."], ["author", "Utah chickens"], ["content", "Numquam officia minus. Ex ipsum rerum. Qui eius nemo."], ["created_at", "2020-06-27 16:15:14.274371"], ["updated_at", "2020-06-27 16:15:14.274371"]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (7.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (29.1ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Green juice cornhole fanny pack church-key."], ["author", "Hawaii elephants"], ["content", "Rem fugiat error. Rerum a non. Quia sunt odit."], ["created_at", "2020-06-27 16:15:14.315159"], ["updated_at", "2020-06-27 16:15:14.315159"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.5ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Forage chicharrones lomo blue bottle single-origin coffee mlkshk shoreditch semiotics."], ["author", "North Dakota spirits"], ["content", "Sit rerum consequatur. Eveniet velit soluta. Qui harum et."], ["created_at", "2020-06-27 16:15:14.357385"], ["updated_at", "2020-06-27 16:15:14.357385"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.4ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Stumptown before they sold out gentrify organic pour-over loko blue bottle."], ["author", "Arkansas oxen"], ["content", "Laboriosam itaque rerum. Corrupti ipsam et. Dicta ut sed."], ["created_at", "2020-06-27 16:15:14.366995"], ["updated_at", "2020-06-27 16:15:14.366995"]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (33.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (36.3ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Typewriter master stumptown viral kinfolk."], ["author", "Maine zebras"], ["content", "Dolores quas sit. Occaecati dolores sunt. Ullam atque voluptate."], ["created_at", "2020-06-27 16:15:14.381621"], ["updated_at", "2020-06-27 16:15:14.381621"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (9.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.5ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Health banjo skateboard thundercats viral artisan."], ["author", "Mississippi lycanthropes"], ["content", "Nisi cum necessitatibus. Adipisci at ut. Similique rem voluptates."], ["created_at", "2020-06-27 16:15:14.462697"], ["updated_at", "2020-06-27 16:15:14.462697"]]
+  [1m[35m (32.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (6.2ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Drinking viral tote bag mlkshk vinegar."], ["author", "Minnesota pigs"], ["content", "Iure placeat et. Eaque quo facilis. Et veritatis consequatur."], ["created_at", "2020-06-27 16:15:14.516655"], ["updated_at", "2020-06-27 16:15:14.516655"]]
+  [1m[35m (24.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (1.1ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Plaid shabby chic everyday before they sold out carry."], ["author", "Utah ghosts"], ["content", "Sequi sed ab. Laboriosam culpa pariatur. Ut ratione blanditiis."], ["created_at", "2020-06-27 16:15:14.556397"], ["updated_at", "2020-06-27 16:15:14.556397"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (6.8ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Pinterest plaid pbr&b try-hard pickled."], ["author", "Maine bees"], ["content", "Ea non ducimus. Porro non asperiores. Libero dolorem quia."], ["created_at", "2020-06-27 16:15:14.567265"], ["updated_at", "2020-06-27 16:15:14.567265"]]
+  [1m[35m (23.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (3.6ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Biodiesel meh pinterest goth sartorial swag pitchfork freegan chillwave."], ["author", "Maryland crows"], ["content", "Qui animi voluptatum. Voluptas ut quasi. Minima animi et."], ["created_at", "2020-06-27 16:15:14.609645"], ["updated_at", "2020-06-27 16:15:14.609645"]]
+  [1m[35m (34.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (7.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (39.1ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Sartorial sustainable hashtag paleo taxidermy."], ["author", "Wisconsin owls"], ["content", "Aut autem cum. Repellat aut omnis. Velit inventore ad."], ["created_at", "2020-06-27 16:15:14.656558"], ["updated_at", "2020-06-27 16:15:14.656558"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.4ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Celiac wolf kogi try-hard raw denim."], ["author", "Vermont oracles"], ["content", "Voluptatem quia id. Laborum expedita aliquid. Explicabo voluptatem repellendus."], ["created_at", "2020-06-27 16:15:14.711106"], ["updated_at", "2020-06-27 16:15:14.711106"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.4ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Ugh sriracha drinking deep v."], ["author", "Kentucky whales"], ["content", "Aut voluptas et. Iste ut qui. Natus quis et."], ["created_at", "2020-06-27 16:15:14.718406"], ["updated_at", "2020-06-27 16:15:14.718406"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (12.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (2.7ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Plaid goth bespoke hoodie single-origin coffee."], ["author", "California fishes"], ["content", "Totam dolore aspernatur. Beatae perspiciatis rerum. Tenetur rem perspiciatis."], ["created_at", "2020-06-27 16:15:14.748737"], ["updated_at", "2020-06-27 16:15:14.748737"]]
+  [1m[35m (33.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.4ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Whatever dreamcatcher bicycle rights synth microdosing."], ["author", "Pennsylvania chickens"], ["content", "Labore in velit. Temporibus laborum assumenda. Ut est quia."], ["created_at", "2020-06-27 16:15:14.808389"], ["updated_at", "2020-06-27 16:15:14.808389"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (1.2ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Keytar messenger bag wes anderson selfies green juice."], ["author", "Georgia tigers"], ["content", "Nihil repudiandae labore. Numquam ea quis. Velit atque ipsa."], ["created_at", "2020-06-27 16:15:14.818913"], ["updated_at", "2020-06-27 16:15:14.818913"]]
+  [1m[35m (26.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (1.1ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Dreamcatcher kombucha chambray whatever cold-pressed bushwick chia pop-up."], ["author", "Mississippi goats"], ["content", "Rerum optio enim. Quo ut culpa. Ut nobis eveniet."], ["created_at", "2020-06-27 16:15:14.857511"], ["updated_at", "2020-06-27 16:15:14.857511"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.6ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Kitsch xoxo migas chia truffaut bespoke chartreuse 8-bit direct trade."], ["author", "Iowa kangaroos"], ["content", "Labore cupiditate deleniti. Id debitis est. Id est culpa."], ["created_at", "2020-06-27 16:15:14.869558"], ["updated_at", "2020-06-27 16:15:14.869558"]]
+  [1m[35m (31.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.7ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Tattooed seitan forage kinfolk post-ironic freegan."], ["author", "Arkansas giants"], ["content", "Eligendi eius et. Quam commodi ad. Optio dolorum necessitatibus."], ["created_at", "2020-06-27 16:15:14.914096"], ["updated_at", "2020-06-27 16:15:14.914096"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.9ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Chambray microdosing leggings pitchfork paleo ugh marfa."], ["author", "Michigan horses"], ["content", "Quibusdam nesciunt ut. Consequatur enim et. Similique deleniti ut."], ["created_at", "2020-06-27 16:15:14.922277"], ["updated_at", "2020-06-27 16:15:14.922277"]]
+  [1m[35m (26.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.6ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Deep v readymade park you probably haven't heard of them forage stumptown fashion axe meggings kogi."], ["author", "Wisconsin druids"], ["content", "Quasi et rem. Reiciendis aliquid fugiat. Ipsum praesentium sapiente."], ["created_at", "2020-06-27 16:15:14.958889"], ["updated_at", "2020-06-27 16:15:14.958889"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (3.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (1.9ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Forage brooklyn sartorial green juice taxidermy hoodie."], ["author", "Maine birds"], ["content", "Consequatur facere animi. Omnis quo id. Aperiam iure est."], ["created_at", "2020-06-27 16:15:14.968303"], ["updated_at", "2020-06-27 16:15:14.968303"]]
+  [1m[35m (24.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.4ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Brunch cronut bicycle rights vinyl."], ["author", "South Carolina chickens"], ["content", "Dignissimos quibusdam aut. Quod deleniti quam. Odit quo sunt."], ["created_at", "2020-06-27 16:15:15.008783"], ["updated_at", "2020-06-27 16:15:15.008783"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.4ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Kogi disrupt kombucha drinking twee cardigan art party pork belly tote bag."], ["author", "South Dakota witches"], ["content", "Sunt unde commodi. Veritatis aliquam distinctio. Eum quia iure."], ["created_at", "2020-06-27 16:15:15.018447"], ["updated_at", "2020-06-27 16:15:15.018447"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (24.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.4ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Authentic tofu 8-bit etsy cronut park kickstarter truffaut meh."], ["author", "Louisiana penguins"], ["content", "Excepturi aliquid ullam. Facilis sed quasi. Omnis earum aut."], ["created_at", "2020-06-27 16:15:15.028700"], ["updated_at", "2020-06-27 16:15:15.028700"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.5ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Listicle meggings 3 wolf moon kale chips venmo meditation trust fund."], ["author", "Nevada black cats"], ["content", "Enim dolore architecto. Exercitationem ut et. Voluptatibus ut optio."], ["created_at", "2020-06-27 16:15:15.062733"], ["updated_at", "2020-06-27 16:15:15.062733"]]
+  [1m[35m (30.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.8ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Normcore cold-pressed sustainable cliche helvetica stumptown."], ["author", "Minnesota crows"], ["content", "Voluptate et iure. Iure officia voluptates. Aut neque laboriosam."], ["created_at", "2020-06-27 16:15:15.106070"], ["updated_at", "2020-06-27 16:15:15.106070"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.6ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Pitchfork normcore post-ironic ramps plaid vegan franzen gluten-free narwhal."], ["author", "Arizona goblins"], ["content", "Iste quod dolores. Qui sequi dolorum. Consequatur et fugit."], ["created_at", "2020-06-27 16:15:15.114757"], ["updated_at", "2020-06-27 16:15:15.114757"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (1.6ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Shabby chic food truck distillery fingerstache kombucha brooklyn salvia occupy."], ["author", "Delaware dogs"], ["content", "Voluptas pariatur eaque. Enim occaecati non. Quo et commodi."], ["created_at", "2020-06-27 16:15:15.121742"], ["updated_at", "2020-06-27 16:15:15.121742"]]
+  [1m[35m (25.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.5ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Phlogiston butcher food truck schlitz."], ["author", "Tennessee zebras"], ["content", "Praesentium consequatur rerum. Temporibus deserunt consequatur. Voluptas eum est."], ["created_at", "2020-06-27 16:15:15.156722"], ["updated_at", "2020-06-27 16:15:15.156722"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.5ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Literally stumptown small batch salvia selfies."], ["author", "Wyoming prophets"], ["content", "Occaecati ullam nemo. Possimus eum vel. Eaque quo facilis."], ["created_at", "2020-06-27 16:15:15.170069"], ["updated_at", "2020-06-27 16:15:15.170069"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.5ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Chicharrones pork belly shoreditch bushwick listicle flexitarian echo."], ["author", "Kentucky exorcists"], ["content", "Aut quae accusamus. Natus facere mollitia. Incidunt voluptatem eos."], ["created_at", "2020-06-27 16:15:15.215648"], ["updated_at", "2020-06-27 16:15:15.215648"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (16.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.4ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Locavore farm-to-table meggings shabby chic."], ["author", "Delaware lycanthropes"], ["content", "Molestias veniam ipsam. Veniam consequatur numquam. Cum quo harum."], ["created_at", "2020-06-27 16:15:15.224829"], ["updated_at", "2020-06-27 16:15:15.224829"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.5ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Tattooed lomo drinking sustainable."], ["author", "Hawaii elves"], ["content", "Non occaecati est. Repudiandae non autem. Qui excepturi sapiente."], ["created_at", "2020-06-27 16:15:15.262842"], ["updated_at", "2020-06-27 16:15:15.262842"]]
+  [1m[35m (25.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.5ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Keytar chicharrones chartreuse lo-fi beard."], ["author", "Virginia worshipers"], ["content", "Aut officiis dolorem. Mollitia quam vero. Est voluptate soluta."], ["created_at", "2020-06-27 16:15:15.306775"], ["updated_at", "2020-06-27 16:15:15.306775"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.5ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Street helvetica meditation plaid flannel."], ["author", "New Hampshire nemesis"], ["content", "Ut velit et. Deleniti porro voluptate. Quis mollitia corporis."], ["created_at", "2020-06-27 16:15:15.314725"], ["updated_at", "2020-06-27 16:15:15.314725"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (25.8ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Pitchfork semiotics trust fund venmo humblebrag fingerstache church-key cliche tofu."], ["author", "Texas lycanthropes"], ["content", "Sit sequi velit. Incidunt dolorem sed. Eos voluptatem ut."], ["created_at", "2020-06-27 16:15:15.323397"], ["updated_at", "2020-06-27 16:15:15.323397"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.5ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Pitchfork actually vinyl vice you probably haven't heard of them kombucha vegan."], ["author", "Wisconsin bees"], ["content", "Quo vitae doloribus. Et commodi eum. Qui dolore iure."], ["created_at", "2020-06-27 16:15:15.358396"], ["updated_at", "2020-06-27 16:15:15.358396"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (1.2ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Flannel readymade lomo pabst."], ["author", "Vermont vixens"], ["content", "Maxime id quibusdam. Animi excepturi earum. Est id et."], ["created_at", "2020-06-27 16:15:15.367776"], ["updated_at", "2020-06-27 16:15:15.367776"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (22.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.6ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Goth loko readymade williamsburg lumbersexual muggle magic."], ["author", "New Mexico oracles"], ["content", "Animi et velit. Sed qui ullam. Aut et doloremque."], ["created_at", "2020-06-27 16:15:15.380764"], ["updated_at", "2020-06-27 16:15:15.380764"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.5ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Post-ironic marfa austin mumblecore bushwick."], ["author", "Texas zombies"], ["content", "Non officia voluptas. Provident alias ex. Corrupti corporis velit."], ["created_at", "2020-06-27 16:15:15.411538"], ["updated_at", "2020-06-27 16:15:15.411538"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (25.9ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Seitan slow-carb narwhal readymade skateboard pickled wayfarers sustainable."], ["author", "Kansas banshees"], ["content", "Qui sit libero. Sunt at pariatur. Deleniti ratione est."], ["created_at", "2020-06-27 16:15:15.421348"], ["updated_at", "2020-06-27 16:15:15.421348"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.4ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Yr pug wes anderson kale chips."], ["author", "Connecticut ducks"], ["content", "Architecto eum facilis. Tempore nobis quod. Sint accusantium veniam."], ["created_at", "2020-06-27 16:15:15.458563"], ["updated_at", "2020-06-27 16:15:15.458563"]]
+  [1m[35m (33.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (3.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.5ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Post-ironic plaid cornhole vice asymmetrical swag fixie carry."], ["author", "Delaware zombies"], ["content", "Laborum commodi qui. Dicta voluptas adipisci. Quas hic et."], ["created_at", "2020-06-27 16:15:15.506318"], ["updated_at", "2020-06-27 16:15:15.506318"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (2.8ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Cleanse quinoa locavore hella seitan."], ["author", "New York geese"], ["content", "Ea id praesentium. Veritatis praesentium illum. Sed nam quia."], ["created_at", "2020-06-27 16:15:15.520407"], ["updated_at", "2020-06-27 16:15:15.520407"]]
+  [1m[35m (24.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (2.8ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Seitan disrupt +1 fingerstache kitsch godard."], ["author", "Wyoming werewolves"], ["content", "Quae et quia. Eum eum tenetur. Quaerat dignissimos modi."], ["created_at", "2020-06-27 16:15:15.556361"], ["updated_at", "2020-06-27 16:15:15.556361"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (1.2ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Flexitarian next level yr swag mustache kitsch."], ["author", "Maryland chimeras"], ["content", "Voluptatibus odio sit. Et magnam est. Minima perferendis ut."], ["created_at", "2020-06-27 16:15:15.569048"], ["updated_at", "2020-06-27 16:15:15.569048"]]
+  [1m[35m (32.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (5.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (29.8ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Vegan church-key gastropub pop-up you probably haven't heard of them ramps."], ["author", "Massachusetts werewolves"], ["content", "Ducimus qui dolor. Animi cumque id. Voluptas animi et."], ["created_at", "2020-06-27 16:15:15.615930"], ["updated_at", "2020-06-27 16:15:15.615930"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (3.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.6ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Craft beer shoreditch vegan vhs brooklyn."], ["author", "Kansas monkeys"], ["content", "Esse autem dolores. Quasi rerum et. Ad eos veritatis."], ["created_at", "2020-06-27 16:15:15.658396"], ["updated_at", "2020-06-27 16:15:15.658396"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.5ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Ethical diy tofu pug."], ["author", "Louisiana pigs"], ["content", "Dolor id odit. Eum veniam et. Eos facere velit."], ["created_at", "2020-06-27 16:15:15.672988"], ["updated_at", "2020-06-27 16:15:15.672988"]]
+  [1m[35m (25.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.4ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Wolf phlogiston pbr&b slow-carb."], ["author", "New Mexico crows"], ["content", "Eaque ut praesentium. Sequi dolorum dolorem. Et magnam vero."], ["created_at", "2020-06-27 16:15:15.710175"], ["updated_at", "2020-06-27 16:15:15.710175"]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (21.7ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "+1 meditation letterpress photo booth cleanse green juice 90's cray paleo."], ["author", "New York spiders"], ["content", "Asperiores dolores beatae. Ea nemo sapiente. Ut nulla quia."], ["created_at", "2020-06-27 16:15:15.722947"], ["updated_at", "2020-06-27 16:15:15.722947"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.5ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Letterpress shabby chic ugh 90's waistcoat."], ["author", "Hawaii nemesis"], ["content", "Enim nostrum est. Aut ex earum. Neque voluptates repellendus."], ["created_at", "2020-06-27 16:15:15.761561"], ["updated_at", "2020-06-27 16:15:15.761561"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (24.7ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Scenester listicle 8-bit thundercats green juice brooklyn kitsch before they sold out plaid."], ["author", "Alabama crows"], ["content", "Harum at quam. Quisquam consequatur doloremque. Quae facilis eum."], ["created_at", "2020-06-27 16:15:15.775054"], ["updated_at", "2020-06-27 16:15:15.775054"]]
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.6ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Meh scenester chambray art party brunch messenger bag etsy pitchfork shoreditch."], ["author", "Alaska foes"], ["content", "Delectus sunt et. Aut minus ducimus. Quia et dolorem."], ["created_at", "2020-06-27 16:15:15.815090"], ["updated_at", "2020-06-27 16:15:15.815090"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (23.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.6ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Next level echo vice bushwick."], ["author", "Arkansas sheep"], ["content", "Enim est dolores. Quis accusamus deleniti. Quia reiciendis consequatur."], ["created_at", "2020-06-27 16:15:15.830359"], ["updated_at", "2020-06-27 16:15:15.830359"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (3.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.4ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Biodiesel heirloom hammock hashtag marfa."], ["author", "Louisiana vampires"], ["content", "Soluta qui aut. Modi consequuntur provident. Nobis voluptatibus similique."], ["created_at", "2020-06-27 16:15:15.862563"], ["updated_at", "2020-06-27 16:15:15.862563"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (23.1ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Retro fanny pack roof trust fund sriracha bicycle rights cronut."], ["author", "Nebraska enchanters"], ["content", "Ut est et. Est corporis quisquam. Ut rem illum."], ["created_at", "2020-06-27 16:15:15.874842"], ["updated_at", "2020-06-27 16:15:15.874842"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (2.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (33.3ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Dreamcatcher kickstarter pitchfork cronut butcher offal direct trade put a bird on it next level."], ["author", "Oregon spirits"], ["content", "Sed sed nostrum. Omnis mollitia vero. Excepturi sint et."], ["created_at", "2020-06-27 16:15:15.913031"], ["updated_at", "2020-06-27 16:15:15.913031"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mNotice Create (0.5ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Chambray mixtape pork belly meh everyday tofu shabby chic."], ["author", "Wisconsin sheep"], ["content", "Occaecati sed quisquam. Sequi aut aut. Ullam velit nulla."], ["created_at", "2020-06-27 16:15:15.958898"], ["updated_at", "2020-06-27 16:15:15.958898"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mNotice Load (1.1ms)[0m  [1m[34mSELECT "notices".* FROM "notices" LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/notices" for ::1 at 2020-06-27 12:43:00 -0400
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by NoticesController#index as */*
+  [1m[36mNotice Load (6.9ms)[0m  [1m[34mSELECT "notices".* FROM "notices"[0m
+  ↳ app/controllers/notices_controller.rb:8:in `index'
+Completed 200 OK in 233ms (Views: 74.4ms | ActiveRecord: 150.2ms | Allocations: 19076)
+
+
+Started GET "/notices" for ::1 at 2020-06-27 12:43:10 -0400
+Processing by NoticesController#index as */*
+  [1m[36mNotice Load (42.5ms)[0m  [1m[34mSELECT "notices".* FROM "notices"[0m
+  ↳ app/controllers/notices_controller.rb:8:in `index'
+Completed 200 OK in 166ms (Views: 122.9ms | ActiveRecord: 42.5ms | Allocations: 14378)
+
+
+Started GET "/notices" for ::1 at 2020-06-27 12:54:27 -0400
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by NoticesController#index as */*
+  [1m[36mNotice Load (16.9ms)[0m  [1m[34mSELECT "notices".* FROM "notices"[0m
+  ↳ app/controllers/notices_controller.rb:8:in `index'
+Completed 200 OK in 125ms (Views: 58.3ms | ActiveRecord: 62.2ms | Allocations: 19076)
+
+
+Started GET "/notices" for ::1 at 2020-06-27 14:02:13 -0400
+Processing by NoticesController#index as */*
+  [1m[36mNotice Load (609.8ms)[0m  [1m[34mSELECT "notices".* FROM "notices"[0m
+  ↳ app/controllers/notices_controller.rb:8:in `index'
+Completed 200 OK in 794ms (Views: 182.6ms | ActiveRecord: 609.8ms | Allocations: 14435)
+
+
+Started GET "/notices" for ::1 at 2020-06-27 14:14:01 -0400
+Processing by NoticesController#index as */*
+  [1m[36mNotice Load (54.4ms)[0m  [1m[34mSELECT "notices".* FROM "notices"[0m
+  ↳ app/controllers/notices_controller.rb:8:in `index'
+Completed 200 OK in 102ms (Views: 45.9ms | ActiveRecord: 54.4ms | Allocations: 14432)
+
+
+Started GET "/notices" for ::1 at 2020-06-27 14:14:06 -0400
+Processing by NoticesController#index as */*
+  [1m[36mNotice Load (1.0ms)[0m  [1m[34mSELECT "notices".* FROM "notices"[0m
+  ↳ app/controllers/notices_controller.rb:8:in `index'
+Completed 200 OK in 64ms (Views: 62.1ms | ActiveRecord: 1.0ms | Allocations: 14379)
+
+
+Started GET "/notices" for ::1 at 2020-06-27 14:15:04 -0400
+Processing by NoticesController#index as */*
+  [1m[36mNotice Load (2.9ms)[0m  [1m[34mSELECT "notices".* FROM "notices"[0m
+  ↳ app/controllers/notices_controller.rb:8:in `index'
+Completed 200 OK in 40ms (Views: 36.6ms | ActiveRecord: 2.9ms | Allocations: 14361)
+
+
+Started GET "/notices" for ::1 at 2020-06-27 14:16:36 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by NoticesController#index as */*
+  [1m[36mNotice Load (18.8ms)[0m  [1m[34mSELECT "notices".* FROM "notices"[0m
+  ↳ app/controllers/notices_controller.rb:8:in `index'
+Completed 200 OK in 117ms (Views: 43.6ms | ActiveRecord: 68.6ms | Allocations: 19076)
+
+
+Started GET "/notices" for ::1 at 2020-06-27 14:17:03 -0400
+Processing by NoticesController#index as */*
+  [1m[36mNotice Load (150.4ms)[0m  [1m[34mSELECT "notices".* FROM "notices"[0m
+  ↳ app/controllers/notices_controller.rb:8:in `index'
+Completed 200 OK in 195ms (Views: 43.6ms | ActiveRecord: 150.4ms | Allocations: 14379)
+
+
+Started GET "/notices" for ::1 at 2020-06-27 14:17:31 -0400
+Processing by NoticesController#index as */*
+  [1m[36mNotice Load (1.2ms)[0m  [1m[34mSELECT "notices".* FROM "notices"[0m
+  ↳ app/controllers/notices_controller.rb:8:in `index'
+Completed 200 OK in 100ms (Views: 98.2ms | ActiveRecord: 1.2ms | Allocations: 14380)
+
+
+Started GET "/notices" for ::1 at 2020-06-27 14:18:46 -0400
+Processing by NoticesController#index as */*
+  [1m[36mNotice Load (6.2ms)[0m  [1m[34mSELECT "notices".* FROM "notices"[0m
+  ↳ app/controllers/notices_controller.rb:8:in `index'
+Completed 200 OK in 52ms (Views: 45.2ms | ActiveRecord: 6.2ms | Allocations: 14379)
+
+
+Started GET "/notices" for ::1 at 2020-06-27 14:19:47 -0400
+Processing by NoticesController#index as */*
+  [1m[36mNotice Load (0.8ms)[0m  [1m[34mSELECT "notices".* FROM "notices"[0m
+  ↳ app/controllers/notices_controller.rb:8:in `index'
+Completed 200 OK in 43ms (Views: 42.1ms | ActiveRecord: 0.8ms | Allocations: 14379)
+
+
+Started GET "/notices" for ::1 at 2020-06-27 14:22:04 -0400
+Processing by NoticesController#index as */*
+  [1m[36mNotice Load (0.9ms)[0m  [1m[34mSELECT "notices".* FROM "notices"[0m
+  ↳ app/controllers/notices_controller.rb:8:in `index'
+Completed 200 OK in 45ms (Views: 43.9ms | ActiveRecord: 0.9ms | Allocations: 14361)
+
+
+Started GET "/notices" for ::1 at 2020-06-27 14:22:30 -0400
+Processing by NoticesController#index as */*
+  [1m[36mNotice Load (48.3ms)[0m  [1m[34mSELECT "notices".* FROM "notices"[0m
+  ↳ app/controllers/notices_controller.rb:8:in `index'
+Completed 200 OK in 141ms (Views: 92.7ms | ActiveRecord: 48.3ms | Allocations: 14364)
+
+
+Started GET "/notices" for ::1 at 2020-06-27 14:26:34 -0400
+Processing by NoticesController#index as */*
+  [1m[36mNotice Load (38.2ms)[0m  [1m[34mSELECT "notices".* FROM "notices"[0m
+  ↳ app/controllers/notices_controller.rb:8:in `index'
+Completed 200 OK in 94ms (Views: 55.5ms | ActiveRecord: 38.2ms | Allocations: 14361)
+
+
+Started GET "/notices" for ::1 at 2020-06-27 14:27:08 -0400
+Processing by NoticesController#index as */*
+  [1m[36mNotice Load (0.9ms)[0m  [1m[34mSELECT "notices".* FROM "notices"[0m
+  ↳ app/controllers/notices_controller.rb:8:in `index'
+Completed 200 OK in 48ms (Views: 46.3ms | ActiveRecord: 0.9ms | Allocations: 14361)
+
+
+Started GET "/notices" for ::1 at 2020-06-27 14:28:26 -0400
+Processing by NoticesController#index as */*
+  [1m[36mNotice Load (99.3ms)[0m  [1m[34mSELECT "notices".* FROM "notices"[0m
+  ↳ app/controllers/notices_controller.rb:8:in `index'
+Completed 200 OK in 348ms (Views: 247.7ms | ActiveRecord: 99.3ms | Allocations: 14365)
+
+
+Started GET "/notices" for ::1 at 2020-06-27 14:36:29 -0400
+Processing by NoticesController#index as */*
+  [1m[36mNotice Load (4.8ms)[0m  [1m[34mSELECT "notices".* FROM "notices"[0m
+  ↳ app/controllers/notices_controller.rb:8:in `index'
+Completed 200 OK in 89ms (Views: 83.6ms | ActiveRecord: 4.8ms | Allocations: 14419)
+
+
+Started GET "/notices" for ::1 at 2020-06-27 14:39:16 -0400
+Processing by NoticesController#index as */*
+  [1m[36mNotice Load (109.8ms)[0m  [1m[34mSELECT "notices".* FROM "notices"[0m
+  ↳ app/controllers/notices_controller.rb:8:in `index'
+Completed 200 OK in 356ms (Views: 245.3ms | ActiveRecord: 109.8ms | Allocations: 14364)
+
+
+Started GET "/notices" for ::1 at 2020-06-27 14:39:51 -0400
+Processing by NoticesController#index as */*
+  [1m[36mNotice Load (0.8ms)[0m  [1m[34mSELECT "notices".* FROM "notices"[0m
+  ↳ app/controllers/notices_controller.rb:8:in `index'
+Completed 200 OK in 375ms (Views: 374.1ms | ActiveRecord: 0.8ms | Allocations: 14364)
+
+
+Started GET "/notices" for ::1 at 2020-06-27 14:40:26 -0400
+Processing by NoticesController#index as */*
+  [1m[36mNotice Load (12.5ms)[0m  [1m[34mSELECT "notices".* FROM "notices"[0m
+  ↳ app/controllers/notices_controller.rb:8:in `index'
+Completed 200 OK in 44ms (Views: 30.7ms | ActiveRecord: 12.5ms | Allocations: 14361)
+
+
+Started GET "/notices" for ::1 at 2020-06-27 14:41:49 -0400
+Processing by NoticesController#index as */*
+  [1m[36mNotice Load (15.5ms)[0m  [1m[34mSELECT "notices".* FROM "notices"[0m
+  ↳ app/controllers/notices_controller.rb:8:in `index'
+Completed 200 OK in 53ms (Views: 36.9ms | ActiveRecord: 15.5ms | Allocations: 14361)
+
+
+Started GET "/notices" for ::1 at 2020-06-27 14:43:30 -0400
+Processing by NoticesController#index as */*
+  [1m[36mNotice Load (26.9ms)[0m  [1m[34mSELECT "notices".* FROM "notices"[0m
+  ↳ app/controllers/notices_controller.rb:8:in `index'
+Completed 200 OK in 64ms (Views: 37.0ms | ActiveRecord: 26.9ms | Allocations: 14361)
+
+
+Started GET "/notices" for ::1 at 2020-06-27 14:44:47 -0400
+Processing by NoticesController#index as */*
+  [1m[36mNotice Load (97.2ms)[0m  [1m[34mSELECT "notices".* FROM "notices"[0m
+  ↳ app/controllers/notices_controller.rb:8:in `index'
+Completed 200 OK in 143ms (Views: 45.2ms | ActiveRecord: 97.2ms | Allocations: 14364)
+
+
+Started GET "/notices" for ::1 at 2020-06-27 14:44:48 -0400
+Processing by NoticesController#index as */*
+  [1m[36mNotice Load (37.2ms)[0m  [1m[34mSELECT "notices".* FROM "notices"[0m
+  ↳ app/controllers/notices_controller.rb:8:in `index'
+Completed 200 OK in 71ms (Views: 33.3ms | ActiveRecord: 37.2ms | Allocations: 14361)
+
+
+Started POST "/notices" for ::1 at 2020-06-27 14:45:03 -0400
+Processing by NoticesController#create as HTML
+  Parameters: {"author"=>"Dr. Seuss", "content"=>"I speak for the trees", "title"=>"I am the Lorax", "notice"=>{"title"=>"I am the Lorax", "author"=>"Dr. Seuss", "content"=>"I speak for the trees"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/notices_controller.rb:20:in `create'
+  [1m[36mNotice Create (28.9ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "I am the Lorax"], ["author", "Dr. Seuss"], ["content", "I speak for the trees"], ["created_at", "2020-06-27 18:45:03.930078"], ["updated_at", "2020-06-27 18:45:03.930078"]]
+  ↳ app/controllers/notices_controller.rb:20:in `create'
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/notices_controller.rb:20:in `create'
+Completed 201 Created in 39ms (Views: 0.9ms | ActiveRecord: 30.6ms | Allocations: 2826)
+
+
+Started GET "/notices" for ::1 at 2020-06-27 16:05:30 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by NoticesController#index as */*
+  [1m[36mNotice Load (20.6ms)[0m  [1m[34mSELECT "notices".* FROM "notices"[0m
+  ↳ app/controllers/notices_controller.rb:8:in `index'
+Completed 200 OK in 116ms (Views: 50.4ms | ActiveRecord: 58.6ms | Allocations: 19207)
+
+
+Started POST "/notices" for ::1 at 2020-06-27 16:08:44 -0400
+Processing by NoticesController#create as HTML
+  Parameters: {"author"=>"Dr. Seuss", "content"=>"I speak for the trees", "title"=>"Rigel 4 Shore Leave", "notice"=>{"title"=>"Rigel 4 Shore Leave", "author"=>"Dr. Seuss", "content"=>"I speak for the trees"}}
+  [1m[35m (20.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/notices_controller.rb:20:in `create'
+  [1m[36mNotice Create (2.6ms)[0m  [1m[32mINSERT INTO "notices" ("title", "author", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Rigel 4 Shore Leave"], ["author", "Dr. Seuss"], ["content", "I speak for the trees"], ["created_at", "2020-06-27 20:08:44.214321"], ["updated_at", "2020-06-27 20:08:44.214321"]]
+  ↳ app/controllers/notices_controller.rb:20:in `create'
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/notices_controller.rb:20:in `create'
+Completed 201 Created in 40ms (Views: 1.4ms | ActiveRecord: 25.1ms | Allocations: 2843)
+
+
